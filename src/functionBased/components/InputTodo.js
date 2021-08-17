@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+
+import React, { useState } from 'react';
 
 const InputTodo = (props) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
 
   const onChange = (e) => {
     setTitle(e.target.value);
@@ -11,9 +14,9 @@ const InputTodo = (props) => {
     e.preventDefault();
     if (title.trim()) {
       props.addTodoProps(title);
-      setTitle("");
+      setTitle('');
     } else {
-      alert("Please write item");
+      alert('Please write item');
     }
   };
 
